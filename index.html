@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>လင်းခါး | စာရေးဆရာ Portfolio</title>
+  <meta name="description" content="လင်းခါး (Lynn Khar) ၏ တရားဝင် portfolio site - စာအုပ်များ၊ ဝေဖန်သုံးသပ်ချက်များနှင့် လေပုရဝုဏ် pre-order လမ်းကြောင်းများ။" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="ambient-shape ambient-left" aria-hidden="true"></div>
+  <div class="ambient-shape ambient-right" aria-hidden="true"></div>
+
+  <header class="site-header" id="home">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Lynn Khar Home">
+        <span class="brand-mark">LK</span>
+        <span class="brand-text">လင်းခါး</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#about">About</a>
+        <a href="#books">Books</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#preorder">Pre-Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-reveal">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Myanmar Author Portfolio</p>
+          <h1>လင်းခါး<br/><span class="hero-sub">Lynn Khar</span></h1>
+          <p class="lead">
+            မြန်မာစာပေလောကရဲ့ လက်တွေ့ဘဝထိတွေ့မှု၊ လူငယ်ဘဝရုန်းကန်မှုနဲ့
+            စိတ်ခံစားမှုဆိုင်ရာအလွှာတွေကို တိတိကျကျဖော်ပြပေးနိုင်တဲ့ စာရေးဆရာတစ်ဦး။
+            ယခုစာမျက်နှာမှာ လက်ရှိလက်လှမ်းမီနိုင်တဲ့ public sources အပေါ်အခြေခံပြီး
+            စာအုပ်စာရင်းနှင့် ဝေဖန်သုံးသပ်ချက်တွေကို စုစည်းတင်ပြထားပါတယ်။
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Messenger မှ Pre-Order</a>
+            <a class="btn btn-ghost js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Telegram Bot မှာ Order</a>
+          </div>
+
+          <ul class="stat-strip">
+            <li><strong>3</strong><span>Published Titles</span></li>
+            <li><strong>98+</strong><span>Goodreads Ratings</span></li>
+            <li><strong>New</strong><span>လေပုရဝုဏ် Pre-Order</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel">
+          <p class="panel-kicker">Featured Mention</p>
+          <h2>Myanmar: The Write Side of History</h2>
+          <p>
+            Mizzima ၏ 2026 article မှာ Lynn Khar ကို contemporary Myanmar poets အနက်
+            resistance experience နဲ့အတူ ဖော်ပြထားပါတယ်။
+          </p>
+          <a href="https://eng.mizzima.com/2026/03/02/31738" target="_blank" rel="noopener noreferrer">Read Source</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about section-reveal" id="about">
+      <div class="container about-grid">
+        <h2>About The Author</h2>
+        <p>
+          လင်းခါး၏ ဝတ္ထုများသည် လက်တွေ့ဘဝအခြေခံလူတန်းစားများ၏ ရုန်းကန်မှု၊
+          လူမှုဖိအားများနှင့် စိတ်ပိုင်းဆိုင်ရာအနှောက်အယှက်များကို သဘာဝကျကျ ရေးဖွဲ့ထားခြင်းကြောင့်
+          စာဖတ်သူအများအပြားနှင့် resonance ဖြစ်စေသည်ဟု reviews များတွင်တွေ့ရသည်။
+        </p>
+        <p>
+          Goodreads author profile အရ public catalog တွင် distinct works 3 အုပ်ကို ရရှိပြီး
+          မိမိတို့၏ new pre-order campaign ဖြစ်သော လေပုရဝုဏ် ကို upcoming release အဖြစ် ထည့်သွင်းထားသည်။
+        </p>
+      </div>
+    </section>
+
+    <section class="books section-reveal" id="books">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Complete Listed Bibliography</p>
+          <h2>စာအုပ်များ</h2>
+          <p class="muted">Goodreads လင်းခါး author profile နှင့် Pann Satt Lann storefront public data အရ စုစည်းထားသည်။</p>
+        </div>
+
+        <div class="books-grid" id="books-grid"></div>
+      </div>
+    </section>
+
+    <section class="reviews section-reveal" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Review Signals</p>
+          <h2>စာဖတ်သူအမြင်များ</h2>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card">
+            <p>
+              "A mixture of realistic and minimal style of writing yet it was emotionally provocative..."
+            </p>
+            <div class="review-meta">Sebastien, Goodreads review on ရေသေအိုင်</div>
+          </article>
+
+          <article class="review-card">
+            <p>
+              "ဆရာ လင်းခါးရဲ့ ဖတ်ဖူးသမျှဝတ္ထု‌တွေထဲ အကြိုက်ဆုံး စာအုပ်ပါ..."
+            </p>
+            <div class="review-meta">Kaung Myat Thi, Pann Satt Lann review on စမ်းရေကြည်နု</div>
+          </article>
+
+          <article class="review-card">
+            <p>
+              "ဖတ်လို့ပြီးခါနီးကျမှ ဟောတော် ဆိုပြီး ကိုယ်ပါအံ့ဩပြီး ငိုလိုက်ရတာ..."
+            </p>
+            <div class="review-meta">Heather Moe, Pann Satt Lann review on ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="preorder section-reveal" id="preorder">
+      <div class="container preorder-grid">
+        <div>
+          <p class="eyebrow">Current Campaign</p>
+          <h2>လေပုရဝုဏ်</h2>
+          <p class="muted">
+            New release pre-order ကို Messenger နဲ့ Telegram bot မှာ direct order တင်နိုင်ပါပြီ။
+          </p>
+
+          <ul class="tier-list">
+            <li><span>1 အုပ်</span><strong>350 THB</strong></li>
+            <li><span>15 အုပ်</span><strong>4,462.50 THB</strong></li>
+            <li><span>30 အုပ်</span><strong>7,350 THB</strong></li>
+          </ul>
+        </div>
+
+        <div class="preorder-card">
+          <h3>Order Now</h3>
+          <p>
+            Payment slip submit လုပ်ပြီး admin approval ရလာတာနဲ့ နာမည်၊ ဖုန်း၊ လိပ်စာ၊ location
+            အချက်အလက်များကို chat ထဲမှာဆက်လက်ဖြည့်နိုင်ပါတယ်။
+          </p>
+          <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Open Messenger</a>
+          <a class="btn btn-ghost js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Open Telegram Bot</a>
+          <p class="tiny-note">Tip: production deploy မလုပ်ခင် app.js ထဲက CTA links ကို သင့် official bot URLs နဲ့ ပြောင်းပါ။</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources section-reveal" id="sources">
+      <div class="container">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://www.goodreads.com/author/show/19507238._" target="_blank" rel="noopener noreferrer">Goodreads Author Profile: လင်းခါး</a></li>
+          <li><a href="https://www.goodreads.com/author/list/19507238._" target="_blank" rel="noopener noreferrer">Goodreads Books List (3 distinct works)</a></li>
+          <li><a href="https://www.goodreads.com/book/show/52725373" target="_blank" rel="noopener noreferrer">Goodreads: ရေသေအိုင်</a></li>
+          <li><a href="https://www.pannsattlann.com/product/yay-thay-eain/" target="_blank" rel="noopener noreferrer">Pann Satt Lann: ရေသေအိုင်</a></li>
+          <li><a href="https://www.pannsattlann.com/product/sann-yay-kyi-nu/" target="_blank" rel="noopener noreferrer">Pann Satt Lann: စမ်းရေကြည်နု</a></li>
+          <li><a href="https://www.pannsattlann.com/product/athael-kwal-pasin-pyan/" target="_blank" rel="noopener noreferrer">Pann Satt Lann: ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ</a></li>
+          <li><a href="https://eng.mizzima.com/2026/03/02/31738" target="_blank" rel="noopener noreferrer">Mizzima: Myanmar: The Write Side of History</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Lynn Khar Portfolio</p>
+      <p>Built for lynnkhar.com</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
