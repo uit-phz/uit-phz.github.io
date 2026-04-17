@@ -1,5 +1,5 @@
 const CONTACT_LINKS = {
-  messenger: 'https://www.facebook.com/lynnkhar.poetry.story',
+  messenger: 'https://m.me/lynnkhar.poetry.story',
   telegram: 'https://t.me/lynnkhar_preorder_bot',
 };
 
