@@ -34,7 +34,7 @@ const books = [
   {
     title: 'လေပုရဝုဏ်',
     year: '2026 Pre-Order',
-    image: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin-600x600.png',
+    image: 'lay-pa-ya-wun.png',
     summary: 'Final campaign page with direct Messenger and Telegram order flow.',
     page: 'books/lay-pu-ya-wun.html',
     source: '#preorder',
@@ -56,8 +56,8 @@ const photos = [
     angle: '1.8deg',
   },
   {
-    src: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin.png',
-    alt: 'ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ cover photo',
+    src: 'lay-pa-ya-wun.png',
+    alt: 'လေပုရဝုဏ် official cover photo',
     span: 'span-5',
     angle: '-1.4deg',
   },
