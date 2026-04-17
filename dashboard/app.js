@@ -38,7 +38,7 @@ const books = [
     ],
   },
   {
-    title: 'လေပုရဝုဏ်',
+    title: 'လေပရဝုဏ်',
     year: 'Upcoming',
     pages: 'Pre-order campaign',
     tags: ['New Release', 'Pre-Order'],

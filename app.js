@@ -32,7 +32,7 @@ const books = [
     hot: false,
   },
   {
-    title: 'လေပုရဝုဏ်',
+    title: 'လေပရဝုဏ်',
     year: '2026 Pre-Order',
     image: 'lay-pa-ya-wun.png',
     summary: 'Dedicated pre-order landing page with 15% and 30% bulk-order promo.',
@@ -57,7 +57,7 @@ const photos = [
   },
   {
     src: 'lay-pa-ya-wun.png',
-    alt: 'လေပုရဝုဏ် official cover photo',
+    alt: 'လေပရဝုဏ် official cover photo',
     span: 'span-5',
     angle: '-1.4deg',
   },
