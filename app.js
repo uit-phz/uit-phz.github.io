@@ -35,9 +35,9 @@ const books = [
     title: 'လေပုရဝုဏ်',
     year: '2026 Pre-Order',
     image: 'lay-pa-ya-wun.png',
-    summary: 'Final campaign page with direct Messenger and Telegram order flow.',
-    page: 'books/lay-pu-ya-wun.html',
-    source: '#preorder',
+    summary: 'Dedicated pre-order landing page with 15% and 30% bulk-order promo.',
+    page: 'preorder.html',
+    source: 'books/lay-pu-ya-wun.html',
     hot: true,
   },
 ];
@@ -74,20 +74,20 @@ const photos = [
     angle: '-2deg',
   },
   {
-    src: 'https://www.pannsattlann.com/wp-content/uploads/2021/06/Shelf-1-6.png',
-    alt: 'reading shelf mood image',
+    src: 'assets/images/author-profile.jpg',
+    alt: 'author portrait artwork',
     span: 'span-4',
     angle: '1.6deg',
   },
   {
-    src: 'https://www.pannsattlann.com/wp-content/uploads/2021/06/FF-1.png',
-    alt: 'book mood colorful photo',
+    src: 'lay-pa-ya-wun.png',
+    alt: 'lay-pa-ya-wun promo cover art',
     span: 'span-4',
     angle: '-1.2deg',
   },
   {
-    src: 'https://www.pannsattlann.com/wp-content/uploads/2021/06/1.png',
-    alt: 'shelf collage image',
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin-600x600.png',
+    alt: 'companion cover artwork',
     span: 'span-4',
     angle: '2.2deg',
   },
@@ -115,7 +115,7 @@ function renderPostcards() {
   root.innerHTML = books
     .map((item, index) => {
       const angle = index % 2 === 0 ? '-2.6deg' : '2.6deg';
-      const hotChip = item.hot ? '<a class="link-chip hot" href="#preorder">Pre-order</a>' : '';
+      const hotChip = item.hot ? '<a class="link-chip hot" href="preorder.html">Promo</a>' : '';
       return `
         <article class="postcard reveal-item" style="--angle:${angle}">
           <img src="${item.image}" alt="${item.title} cover" loading="lazy" />

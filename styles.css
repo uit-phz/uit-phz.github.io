@@ -656,11 +656,70 @@ section {
   padding: 0.62rem 0.76rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 0.9rem;
 }
 
 .price-list strong {
   color: var(--accent-strong);
   font-family: var(--font-ui);
+}
+
+.promo-tagline {
+  margin: 0.82rem 0 0;
+  font-family: var(--font-ui);
+  color: var(--accent-strong);
+  font-size: 0.88rem;
+}
+
+.promo-tagline strong {
+  font-weight: 700;
+}
+
+.price-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.44rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.price-detail em {
+  font-style: normal;
+  text-decoration: line-through;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: 0.77rem;
+}
+
+.price-detail b {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: #246f4a;
+  border: 1px solid rgba(36, 111, 74, 0.3);
+  background: rgba(158, 201, 178, 0.24);
+  border-radius: 999px;
+  padding: 0.2rem 0.46rem;
+}
+
+.promo-note {
+  margin-top: 0.74rem;
+  border: 1px dashed rgba(122, 91, 55, 0.3);
+  background: rgba(255, 255, 255, 0.64);
+  border-radius: 12px;
+  padding: 0.6rem 0.72rem;
+}
+
+.promo-note p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.promo-card-line {
+  margin: 0;
+  font-family: var(--font-ui);
+  color: var(--accent-strong);
+  font-size: 0.82rem;
 }
 
 .preorder-page-link {

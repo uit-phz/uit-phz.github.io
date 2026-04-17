@@ -188,6 +188,74 @@ main {
   gap: 0.6rem;
 }
 
+.promo-banner {
+  margin-top: 0.9rem;
+  border: 1px solid rgba(32, 105, 73, 0.28);
+  background: linear-gradient(125deg, rgba(158, 201, 178, 0.3), rgba(255, 255, 255, 0.85));
+  border-radius: 12px;
+  padding: 0.62rem 0.72rem;
+}
+
+.promo-banner p {
+  margin: 0;
+  font-family: var(--font-ui);
+  color: #235f45;
+  font-size: 0.82rem;
+}
+
+.promo-table {
+  margin-top: 0.85rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.promo-row {
+  border: 1px solid rgba(122, 95, 59, 0.22);
+  border-radius: 11px;
+  padding: 0.54rem 0.66rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.promo-row span {
+  color: var(--ink);
+}
+
+.promo-row .value {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.promo-row strong {
+  font-family: var(--font-ui);
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+}
+
+.promo-row em {
+  font-style: normal;
+  text-decoration: line-through;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+}
+
+.promo-row b {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: #225d44;
+  border: 1px solid rgba(34, 93, 68, 0.28);
+  background: rgba(158, 201, 178, 0.23);
+  border-radius: 999px;
+  padding: 0.18rem 0.45rem;
+}
+
 .btn {
   min-height: 42px;
   border-radius: 999px;
@@ -319,6 +387,15 @@ main {
   .book-hero,
   .meta-strip {
     grid-template-columns: 1fr;
+  }
+
+  .promo-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .promo-row .value {
+    justify-content: flex-start;
   }
 
   .gallery-grid .span-4,
