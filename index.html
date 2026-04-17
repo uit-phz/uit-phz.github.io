@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>လင်းခါး | Author Portfolio</title>
-  <meta name="description" content="လင်းခါး (Lynn Khar) portfolio - postcard style book gallery, reviews, and လေပုရဝုဏ် pre-order links." />
+  <title>လင်းခါး | Author Postcard Library</title>
+  <meta name="description" content="လင်းခါး (Lynn Khar) author portfolio with book landing pages, gallery, minimalist animation, and လေပုရဝုဏ် pre-order links." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+Myanmar:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+Myanmar:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-orb orb-a" aria-hidden="true"></div>
+  <div class="bg-orb orb-b" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
@@ -26,9 +27,9 @@
       </button>
 
       <nav class="site-nav" id="site-nav">
-        <a href="#about">About</a>
-        <a href="#postcards">Books</a>
+        <a href="#books">Books</a>
         <a href="#gallery">Gallery</a>
+        <a href="#journal">Author Note</a>
         <a href="#preorder">Pre-Order</a>
       </nav>
     </div>
@@ -38,61 +39,92 @@
     <section class="hero reveal">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="kicker">Myanmar Author Portfolio</p>
+          <p class="kicker">Cute Author Vibe Archive</p>
           <h1>လင်းခါး<br/><span>Lynn Khar</span></h1>
           <p>
-            လက်တွေ့ဘဝနှင့် လူငယ်ရုန်းကန်မှုကို သက်ရောက်မှုရှိစွာ ရေးဖွဲ့သည့်
-            မြန်မာစာရေးဆရာ၏ postcard-inspired portfolio.
+            စာအုပ်တစ်အုပ်ချင်းစီအတွက် သီးသန့် landing page များ၊ ပုံရိပ်စာစုများ၊
+            စာဖတ်သူအသံများနှင့် လေပုရဝုဏ် pre-order link များကို postcard mood ဖြင့် တစ်နေရာတည်းတွင် စုစည်းထားသည်။
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Messenger Pre-Order</a>
-            <a class="btn btn-soft js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Telegram Bot</a>
+            <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">
+              <span class="btn-icon">✦</span>
+              Messenger Pre-Order
+            </a>
+            <a class="btn btn-soft js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">
+              <span class="btn-icon">✉</span>
+              Telegram Bot
+            </a>
+            <a class="btn btn-ghost" href="books/lay-pu-ya-wun.html">
+              <span class="btn-icon">❤</span>
+              Final Book Page
+            </a>
           </div>
 
           <div class="hero-metrics">
-            <div><strong>3</strong><span>listed titles</span></div>
-            <div><strong>98+</strong><span>ratings</span></div>
-            <div><strong>လေပုရဝုဏ်</strong><span>new campaign</span></div>
+            <div><strong>4</strong><span>book pages</span></div>
+            <div><strong>10+</strong><span>photo frames</span></div>
+            <div><strong>လေပုရဝုဏ်</strong><span>pre-order open</span></div>
+            <div><strong>2026</strong><span>portfolio refresh</span></div>
+          </div>
+
+          <div class="micro-links">
+            <a href="books/yay-thay-e.html">ရေသေအိုင်</a>
+            <a href="books/san-yay-kyi-nu.html">စမ်းရေကြည်နု</a>
+            <a href="books/phan-palin.html">ဖန်ပုလင်းထဲက...</a>
+            <a href="books/lay-pu-ya-wun.html">လေပုရဝုဏ်</a>
           </div>
         </div>
 
         <aside class="hero-stack" id="hero-stack">
-          <article class="hero-card author-card">
-            <img src="https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png" alt="လင်းခါး author profile" loading="eager" />
-            <div>
+          <article class="portrait-card">
+            <img src="https://s.gr-assets.com/assets/nophoto/user/u_700x933-9d85205e45c8c5b42bde388f589bd0cf.png" alt="လင်းခါး author portrait" loading="eager" />
+            <div class="portrait-meta">
               <p class="card-title">Author Portrait</p>
-              <p class="card-sub">public profile image</p>
+              <p class="card-sub">Goodreads public profile image</p>
             </div>
           </article>
 
-          <article class="hero-card mini-book">
+          <article class="floating-cover floating-a">
+            <img src="https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu.png" alt="စမ်းရေကြည်နု cover" loading="lazy" />
+          </article>
+
+          <article class="floating-cover floating-b">
             <img src="https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin.png" alt="ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ cover" loading="lazy" />
           </article>
 
-          <article class="hero-card mini-book">
-            <img src="https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu.png" alt="စမ်းရေကြည်နု cover" loading="lazy" />
-          </article>
+          <span class="sticker sticker-star" aria-hidden="true">✦</span>
+          <span class="sticker sticker-heart" aria-hidden="true">❤</span>
+          <span class="sticker sticker-wave" aria-hidden="true">〰</span>
         </aside>
       </div>
     </section>
 
-    <section class="about reveal" id="about">
-      <div class="container about-grid">
-        <h2>Minimal Bio</h2>
-        <p>
-          Goodreads တွင် လင်းခါးအမည်ဖြင့် ထုတ်ဝေထားသောစာအုပ် ၃ အုပ်ကို အတည်ပြုနိုင်ပြီး၊
-          စာဖတ်သူ review များတွင် လူငယ်ဘဝ၊ အခြေခံလူတန်းစားဘဝနှင့် စိတ်ခံစားမှုအလွှာများကို
-          တိတိကျကျဖော်ပြထားကြောင်း ထင်ရှားသည်။
-        </p>
+    <section class="journal reveal" id="journal">
+      <div class="container journal-grid">
+        <article class="journal-note">
+          <p class="kicker">Author Note</p>
+          <h2>Minimal Bio, Warm Mood</h2>
+          <p>
+            Goodreads နှင့် Pann Satt Lann မှ စာအုပ်စာရင်းအချက်အလက်များအပေါ် အခြေခံပြီး
+            လင်းခါး၏ စာရေးသဘောထားကို soft minimalist ပုံစံဖြင့် ပြန်လည်တင်ဆက်ထားသည်။
+            ဒီစာမျက်နှာတွင် စာအုပ်တစ်အုပ်ချင်းစီအတွက် detail landing page သို့ တိုက်ရိုက်ဝင်နိုင်သည်။
+          </p>
+        </article>
+
+        <div class="journal-collage">
+          <figure><img src="https://www.pannsattlann.com/wp-content/uploads/2021/06/FF-1.png" alt="colorful book mood" loading="lazy" /></figure>
+          <figure><img src="https://www.pannsattlann.com/wp-content/uploads/2021/06/1.png" alt="book shelf photo" loading="lazy" /></figure>
+          <figure><img src="https://www.pannsattlann.com/wp-content/uploads/2021/06/Shelf-1-6.png" alt="reading shelf setup" loading="lazy" /></figure>
+        </div>
       </div>
     </section>
 
-    <section class="postcards reveal" id="postcards">
+    <section class="postcards reveal" id="books">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Postcard Shelf</p>
-          <h2>စာအုပ်များ</h2>
+          <p class="kicker">Book Landing Pages</p>
+          <h2>စာအုပ်တစ်အုပ်ချင်းစီအတွက် စာမျက်နှာ</h2>
         </div>
         <div class="postcard-grid" id="postcard-grid"></div>
       </div>
@@ -101,7 +133,7 @@
     <section class="gallery reveal" id="gallery">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Photo Collage</p>
+          <p class="kicker">More Pictures</p>
           <h2>Visual Moodboard</h2>
         </div>
         <div class="photo-wall" id="photo-wall"></div>
@@ -121,20 +153,30 @@
     <section class="preorder reveal" id="preorder">
       <div class="container preorder-shell">
         <div>
-          <p class="kicker">Now Open</p>
+          <p class="kicker">Final Book Campaign</p>
           <h2>လေပုရဝုဏ်</h2>
-          <p class="small-copy">new pre-order campaign - quick checkout through Messenger and Telegram bot.</p>
+          <p class="small-copy">pre-order flow: start chat, send payment slip, admin confirm, then delivery note.</p>
           <ul class="price-list">
             <li><span>1 အုပ်</span><strong>350 THB</strong></li>
             <li><span>15 အုပ်</span><strong>4,462.50 THB</strong></li>
             <li><span>30 အုပ်</span><strong>7,350 THB</strong></li>
           </ul>
+          <div class="preorder-page-link">
+            <a href="books/lay-pu-ya-wun.html">Open Final Book Landing Page</a>
+          </div>
         </div>
 
         <div class="preorder-card">
-          <p>Start chat, send payment slip, get admin approval, and confirm delivery details.</p>
-          <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Order via Messenger</a>
-          <a class="btn btn-soft js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Order via Telegram</a>
+          <img src="https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin-600x600.png" alt="လေပုရဝုဏ် pre-order visual" loading="lazy" />
+          <p>Choose your channel and place order instantly.</p>
+          <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="btn-icon">✦</span>
+            Order via Messenger
+          </a>
+          <a class="btn btn-soft js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="btn-icon">✉</span>
+            Order via Telegram
+          </a>
         </div>
       </div>
     </section>
@@ -157,7 +199,7 @@
 
   <footer class="site-footer">
     <div class="container footer-shell">
-      <p>© <span id="year"></span> Lynn Khar Portfolio</p>
+      <p>© <span id="year"></span> Lynn Khar Author Library</p>
       <a href="#top">Back to top</a>
     </div>
   </footer>

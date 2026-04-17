@@ -1,0 +1,351 @@
+:root {
+  --bg: #f8f0e4;
+  --paper: #fff8ef;
+  --ink: #2f2418;
+  --ink-soft: #6e6250;
+  --line: #dfcfb6;
+  --accent: #d16a3a;
+  --accent-strong: #9f3f1f;
+  --shadow: 0 18px 36px rgba(56, 35, 21, 0.14);
+  --font-mm: 'Noto Serif Myanmar', serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-ui: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-mm);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 8%, #ffe8d5 0, transparent 32%),
+    radial-gradient(circle at 92% 92%, #f9ead2 0, transparent 38%),
+    var(--bg);
+}
+
+.page-grain {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.24) 1px, transparent 0);
+  background-size: 4px 4px;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container {
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto;
+}
+
+.book-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(251, 244, 233, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(122, 95, 59, 0.2);
+}
+
+.book-header .container {
+  min-height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.header-links {
+  display: inline-flex;
+  gap: 0.8rem;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+}
+
+main {
+  padding: 2.2rem 0 2.8rem;
+}
+
+.book-hero {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 1rem;
+}
+
+.card,
+.book-gallery,
+.note-card,
+.meta-strip {
+  border: 1px solid rgba(124, 96, 60, 0.23);
+  border-radius: 18px;
+  background: rgba(255, 253, 248, 0.76);
+  box-shadow: var(--shadow);
+}
+
+.book-cover {
+  padding: 0.78rem;
+  transform: rotate(-2.2deg);
+}
+
+.book-cover img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.book-meta {
+  padding: 1rem;
+}
+
+.kicker {
+  margin: 0;
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.book-meta h1 {
+  margin: 0.42rem 0 0.62rem;
+  font-family: var(--font-display);
+  line-height: 0.94;
+  font-size: clamp(2.3rem, 7vw, 4rem);
+}
+
+.book-meta p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.meta-strip {
+  margin-top: 0.85rem;
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.meta-strip div {
+  border: 1px solid rgba(122, 95, 59, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.58);
+  padding: 0.45rem 0.55rem;
+}
+
+.meta-strip strong {
+  display: block;
+  font-family: var(--font-ui);
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+}
+
+.meta-strip span {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.action-row {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.btn {
+  min-height: 42px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.64rem 0.95rem;
+  transition: transform 220ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+}
+
+.btn-soft {
+  color: var(--accent-strong);
+  border-color: rgba(120, 88, 55, 0.24);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.book-gallery {
+  margin-top: 1rem;
+  padding: 0.75rem;
+}
+
+.book-gallery h2,
+.note-card h2 {
+  margin: 0.2rem 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(124, 96, 60, 0.23);
+  background: #fff;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid .span-4 {
+  grid-column: span 4;
+  min-height: 210px;
+}
+
+.gallery-grid .span-8 {
+  grid-column: span 8;
+  min-height: 210px;
+}
+
+.gallery-grid .span-6 {
+  grid-column: span 6;
+  min-height: 200px;
+}
+
+.note-card {
+  margin-top: 1rem;
+  padding: 0.95rem;
+}
+
+.note-card p {
+  margin: 0;
+  line-height: 1.78;
+  color: var(--ink-soft);
+}
+
+.quote {
+  margin-top: 0.7rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(130, 93, 53, 0.34);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.footer {
+  margin-top: 1.3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(120, 88, 55, 0.24);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.footer p,
+.footer a {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 650ms ease var(--delay, 0ms), transform 650ms ease var(--delay, 0ms);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .book-hero,
+  .meta-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid .span-4,
+  .gallery-grid .span-6,
+  .gallery-grid .span-8 {
+    grid-column: span 6;
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 1.15rem, 980px);
+  }
+
+  main {
+    padding: 1.45rem 0 2rem;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .gallery-grid .span-4,
+  .gallery-grid .span-6,
+  .gallery-grid .span-8 {
+    grid-column: span 12;
+    min-height: 180px;
+  }
+}

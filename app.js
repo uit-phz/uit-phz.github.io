@@ -3,34 +3,42 @@ const CONTACT_LINKS = {
   telegram: 'https://t.me/your_bot_username',
 };
 
-const postcards = [
+const books = [
   {
     title: 'ရေသေအိုင်',
     year: '2019',
     image: 'https://www.pannsattlann.com/wp-content/uploads/2019/08/yay-thay-e.png',
-    summary: 'youth, memory, and social pressure in one emotionally heavy arc.',
-    href: 'https://www.goodreads.com/book/show/52725373',
+    summary: 'လူငယ်ဘဝ၊ မှတ်ဉာဏ်နှင့် လူမှုဖိအားကြားက စိတ်ပိုင်းဆိုင်ရာရေစီးကြောင်း။',
+    page: 'books/yay-thay-e.html',
+    source: 'https://www.goodreads.com/book/show/52725373',
+    hot: false,
   },
   {
     title: 'စမ်းရေကြည်နု',
     year: '2020',
     image: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu.png',
-    summary: 'a portrait of everyday struggle, family, and quiet collapse.',
-    href: 'https://www.pannsattlann.com/product/sann-yay-kyi-nu/',
+    summary: 'မိသားစုဘဝအက်ကြောင်း၊ နေ့စဉ်တိတ်ဆိတ်မှုနှင့် ရင်ထဲက မပြောဖြစ်သေးသော အသံများ။',
+    page: 'books/san-yay-kyi-nu.html',
+    source: 'https://www.pannsattlann.com/product/sann-yay-kyi-nu/',
+    hot: false,
   },
   {
     title: 'ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ',
     year: '2025',
     image: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin.png',
-    summary: 'coming-of-age tenderness with jagged edges.',
-    href: 'https://www.pannsattlann.com/product/athael-kwal-pasin-pyan/',
+    summary: 'နူးညံ့သော်လည်း ကိုက်ခဲနေသည့် coming-of-age စာရေးသံစဉ်။',
+    page: 'books/phan-palin.html',
+    source: 'https://www.pannsattlann.com/product/athael-kwal-pasin-pyan/',
+    hot: false,
   },
   {
     title: 'လေပုရဝုဏ်',
-    year: 'Upcoming',
+    year: '2026 Pre-Order',
     image: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin-600x600.png',
-    summary: 'current pre-order campaign with messenger + telegram checkout.',
-    href: '#preorder',
+    summary: 'Final campaign page with direct Messenger and Telegram order flow.',
+    page: 'books/lay-pu-ya-wun.html',
+    source: '#preorder',
+    hot: true,
   },
 ];
 
@@ -38,32 +46,56 @@ const photos = [
   {
     src: 'https://www.pannsattlann.com/wp-content/uploads/2019/08/yay-thay-e.png',
     alt: 'ရေသေအိုင် cover photo',
+    span: 'span-4',
+    angle: '-2.5deg',
   },
   {
     src: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu.png',
     alt: 'စမ်းရေကြည်နု cover photo',
+    span: 'span-3',
+    angle: '1.8deg',
   },
   {
     src: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin.png',
     alt: 'ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ cover photo',
+    span: 'span-5',
+    angle: '-1.4deg',
   },
   {
     src: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu-1.jpg',
-    alt: 'စမ်းရေကြည်နု additional photo',
+    alt: 'စမ်းရေကြည်နု additional photo one',
+    span: 'span-6',
+    angle: '2.2deg',
   },
   {
     src: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu-2.jpg',
-    alt: 'စမ်းရေကြည်နု interior image',
+    alt: 'စမ်းရေကြည်နု additional photo two',
+    span: 'span-6',
+    angle: '-2deg',
   },
   {
     src: 'https://www.pannsattlann.com/wp-content/uploads/2021/06/Shelf-1-6.png',
-    alt: 'book shelf mood image',
+    alt: 'reading shelf mood image',
+    span: 'span-4',
+    angle: '1.6deg',
+  },
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2021/06/FF-1.png',
+    alt: 'book mood colorful photo',
+    span: 'span-4',
+    angle: '-1.2deg',
+  },
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2021/06/1.png',
+    alt: 'shelf collage image',
+    span: 'span-4',
+    angle: '2.2deg',
   },
 ];
 
 const reviews = [
   {
-    quote: 'A mixture of realistic and minimal style of writing yet it was emotionally provocative.',
+    quote: 'A mixture of realistic and minimal style of writing, yet deeply provocative.',
     meta: 'Goodreads reader on ရေသေအိုင်',
   },
   {
@@ -71,7 +103,7 @@ const reviews = [
     meta: 'Pann Satt Lann reader on စမ်းရေကြည်နု',
   },
   {
-    quote: 'ဖတ်လို့ပြီးခါနီးကျမှ ဟောတော် ဆိုပြီး ကိုယ်ပါအံ့ဩပြီး ငိုလိုက်ရတာ။',
+    quote: 'ဖတ်ပြီးခါနီးမှာ လုံးဝအံ့ဩပြီး မျက်ရည်ပါကျသွားတယ်။',
     meta: 'Pann Satt Lann reader on ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ',
   },
 ];
@@ -80,17 +112,22 @@ function renderPostcards() {
   const root = document.getElementById('postcard-grid');
   if (!root) return;
 
-  root.innerHTML = postcards
+  root.innerHTML = books
     .map((item, index) => {
-      const angle = index % 2 === 0 ? '-2.8deg' : '2.8deg';
+      const angle = index % 2 === 0 ? '-2.6deg' : '2.6deg';
+      const hotChip = item.hot ? '<a class="link-chip hot" href="#preorder">Pre-order</a>' : '';
       return `
-        <article class="postcard" style="--angle:${angle}">
+        <article class="postcard reveal-item" style="--angle:${angle}">
           <img src="${item.image}" alt="${item.title} cover" loading="lazy" />
           <h3>${item.title}</h3>
           <p>${item.summary}</p>
           <div class="pc-meta">
             <span>${item.year}</span>
-            <a href="${item.href}" target="_blank" rel="noopener noreferrer">view</a>
+          </div>
+          <div class="pc-links">
+            <a class="link-chip" href="${item.page}">Landing page</a>
+            <a class="link-chip" href="${item.source}" target="_blank" rel="noopener noreferrer">Source</a>
+            ${hotChip}
           </div>
         </article>
       `;
@@ -105,7 +142,7 @@ function renderPhotos() {
   root.innerHTML = photos
     .map(
       (item) => `
-        <figure class="photo">
+        <figure class="photo ${item.span} reveal-item" style="--photo-angle:${item.angle}">
           <img src="${item.src}" alt="${item.alt}" loading="lazy" />
         </figure>
       `
@@ -120,7 +157,7 @@ function renderReviews() {
   root.innerHTML = reviews
     .map(
       (item) => `
-        <article class="review">
+        <article class="review reveal-item">
           <p>"${item.quote}"</p>
           <small>${item.meta}</small>
         </article>
@@ -159,8 +196,12 @@ function setupNav() {
 }
 
 function setupReveal() {
-  const items = document.querySelectorAll('.reveal');
+  const items = [...document.querySelectorAll('.reveal, .reveal-item')];
   if (!items.length) return;
+
+  items.forEach((item, index) => {
+    item.style.setProperty('--delay', `${index * 28}ms`);
+  });
 
   const obs = new IntersectionObserver(
     (entries) => {
@@ -171,7 +212,7 @@ function setupReveal() {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.14 }
   );
 
   items.forEach((item) => obs.observe(item));
@@ -181,8 +222,8 @@ function setupHeroMotion() {
   const stack = document.getElementById('hero-stack');
   if (!stack || window.matchMedia('(max-width: 1020px)').matches) return;
 
+  const nodes = stack.querySelectorAll('.portrait-card, .floating-cover, .sticker');
   let rafId = null;
-  const cards = stack.querySelectorAll('.hero-card');
 
   stack.addEventListener('mousemove', (event) => {
     const rect = stack.getBoundingClientRect();
@@ -191,16 +232,34 @@ function setupHeroMotion() {
 
     if (rafId) cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(() => {
-      cards.forEach((card, index) => {
-        const depth = (index + 1) * 7;
-        card.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+      nodes.forEach((node, index) => {
+        const depth = (index + 1) * 4;
+        node.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
       });
     });
   });
 
   stack.addEventListener('mouseleave', () => {
-    cards.forEach((card) => {
-      card.style.transform = 'translate(0, 0)';
+    nodes.forEach((node) => {
+      node.style.transform = 'translate(0, 0)';
+    });
+  });
+}
+
+function setupCardTilt() {
+  if (window.matchMedia('(max-width: 960px)').matches) return;
+  const cards = document.querySelectorAll('.postcard');
+
+  cards.forEach((card) => {
+    card.addEventListener('mousemove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `rotateX(${y * -4}deg) rotateY(${x * 6}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
     });
   });
 }
@@ -218,6 +277,7 @@ function boot() {
   setupNav();
   setupReveal();
   setupHeroMotion();
+  setupCardTilt();
   setYear();
 }
 
