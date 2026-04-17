@@ -1,6 +1,6 @@
 const CONTACT_LINKS = {
-  messenger: 'https://m.me/your-page-id',
-  telegram: 'https://t.me/your_bot_username',
+  messenger: 'https://www.facebook.com/lynnkhar.poetry.story',
+  telegram: 'https://t.me/lynnkhar_preorder_bot',
 };
 
 const books = [
