@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>လင်းခါး | စာရေးဆရာ Portfolio</title>
-  <meta name="description" content="လင်းခါး (Lynn Khar) ၏ တရားဝင် portfolio site - စာအုပ်များ၊ ဝေဖန်သုံးသပ်ချက်များနှင့် လေပုရဝုဏ် pre-order လမ်းကြောင်းများ။" />
+  <title>လင်းခါး | Author Portfolio</title>
+  <meta name="description" content="လင်းခါး (Lynn Khar) portfolio - postcard style book gallery, reviews, and လေပုရဝုဏ် pre-order links." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+Myanmar:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+Myanmar:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise-layer" aria-hidden="true"></div>
-  <div class="ambient-shape ambient-left" aria-hidden="true"></div>
-  <div class="ambient-shape ambient-right" aria-hidden="true"></div>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <header class="site-header" id="home">
-    <div class="container nav-wrap">
-      <a class="brand" href="#home" aria-label="Lynn Khar Home">
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="Home">
         <span class="brand-mark">LK</span>
-        <span class="brand-text">လင်းခါး</span>
+        <span class="brand-name">လင်းခါး</span>
       </a>
 
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,119 +27,104 @@
 
       <nav class="site-nav" id="site-nav">
         <a href="#about">About</a>
-        <a href="#books">Books</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#postcards">Books</a>
+        <a href="#gallery">Gallery</a>
         <a href="#preorder">Pre-Order</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero section-reveal">
+    <section class="hero reveal">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Myanmar Author Portfolio</p>
-          <h1>လင်းခါး<br/><span class="hero-sub">Lynn Khar</span></h1>
-          <p class="lead">
-            မြန်မာစာပေလောကရဲ့ လက်တွေ့ဘဝထိတွေ့မှု၊ လူငယ်ဘဝရုန်းကန်မှုနဲ့
-            စိတ်ခံစားမှုဆိုင်ရာအလွှာတွေကို တိတိကျကျဖော်ပြပေးနိုင်တဲ့ စာရေးဆရာတစ်ဦး။
-            ယခုစာမျက်နှာမှာ လက်ရှိလက်လှမ်းမီနိုင်တဲ့ public sources အပေါ်အခြေခံပြီး
-            စာအုပ်စာရင်းနှင့် ဝေဖန်သုံးသပ်ချက်တွေကို စုစည်းတင်ပြထားပါတယ်။
+          <p class="kicker">Myanmar Author Portfolio</p>
+          <h1>လင်းခါး<br/><span>Lynn Khar</span></h1>
+          <p>
+            လက်တွေ့ဘဝနှင့် လူငယ်ရုန်းကန်မှုကို သက်ရောက်မှုရှိစွာ ရေးဖွဲ့သည့်
+            မြန်မာစာရေးဆရာ၏ postcard-inspired portfolio.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Messenger မှ Pre-Order</a>
-            <a class="btn btn-ghost js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Telegram Bot မှာ Order</a>
+            <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Messenger Pre-Order</a>
+            <a class="btn btn-soft js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Telegram Bot</a>
           </div>
 
-          <ul class="stat-strip">
-            <li><strong>3</strong><span>Published Titles</span></li>
-            <li><strong>98+</strong><span>Goodreads Ratings</span></li>
-            <li><strong>New</strong><span>လေပုရဝုဏ် Pre-Order</span></li>
-          </ul>
+          <div class="hero-metrics">
+            <div><strong>3</strong><span>listed titles</span></div>
+            <div><strong>98+</strong><span>ratings</span></div>
+            <div><strong>လေပုရဝုဏ်</strong><span>new campaign</span></div>
+          </div>
         </div>
 
-        <aside class="hero-panel">
-          <p class="panel-kicker">Featured Mention</p>
-          <h2>Myanmar: The Write Side of History</h2>
-          <p>
-            Mizzima ၏ 2026 article မှာ Lynn Khar ကို contemporary Myanmar poets အနက်
-            resistance experience နဲ့အတူ ဖော်ပြထားပါတယ်။
-          </p>
-          <a href="https://eng.mizzima.com/2026/03/02/31738" target="_blank" rel="noopener noreferrer">Read Source</a>
+        <aside class="hero-stack" id="hero-stack">
+          <article class="hero-card author-card">
+            <img src="https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png" alt="လင်းခါး author profile" loading="eager" />
+            <div>
+              <p class="card-title">Author Portrait</p>
+              <p class="card-sub">public profile image</p>
+            </div>
+          </article>
+
+          <article class="hero-card mini-book">
+            <img src="https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin.png" alt="ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ cover" loading="lazy" />
+          </article>
+
+          <article class="hero-card mini-book">
+            <img src="https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu.png" alt="စမ်းရေကြည်နု cover" loading="lazy" />
+          </article>
         </aside>
       </div>
     </section>
 
-    <section class="about section-reveal" id="about">
+    <section class="about reveal" id="about">
       <div class="container about-grid">
-        <h2>About The Author</h2>
+        <h2>Minimal Bio</h2>
         <p>
-          လင်းခါး၏ ဝတ္ထုများသည် လက်တွေ့ဘဝအခြေခံလူတန်းစားများ၏ ရုန်းကန်မှု၊
-          လူမှုဖိအားများနှင့် စိတ်ပိုင်းဆိုင်ရာအနှောက်အယှက်များကို သဘာဝကျကျ ရေးဖွဲ့ထားခြင်းကြောင့်
-          စာဖတ်သူအများအပြားနှင့် resonance ဖြစ်စေသည်ဟု reviews များတွင်တွေ့ရသည်။
-        </p>
-        <p>
-          Goodreads author profile အရ public catalog တွင် distinct works 3 အုပ်ကို ရရှိပြီး
-          မိမိတို့၏ new pre-order campaign ဖြစ်သော လေပုရဝုဏ် ကို upcoming release အဖြစ် ထည့်သွင်းထားသည်။
+          Goodreads တွင် လင်းခါးအမည်ဖြင့် ထုတ်ဝေထားသောစာအုပ် ၃ အုပ်ကို အတည်ပြုနိုင်ပြီး၊
+          စာဖတ်သူ review များတွင် လူငယ်ဘဝ၊ အခြေခံလူတန်းစားဘဝနှင့် စိတ်ခံစားမှုအလွှာများကို
+          တိတိကျကျဖော်ပြထားကြောင်း ထင်ရှားသည်။
         </p>
       </div>
     </section>
 
-    <section class="books section-reveal" id="books">
+    <section class="postcards reveal" id="postcards">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Complete Listed Bibliography</p>
+          <p class="kicker">Postcard Shelf</p>
           <h2>စာအုပ်များ</h2>
-          <p class="muted">Goodreads လင်းခါး author profile နှင့် Pann Satt Lann storefront public data အရ စုစည်းထားသည်။</p>
         </div>
-
-        <div class="books-grid" id="books-grid"></div>
+        <div class="postcard-grid" id="postcard-grid"></div>
       </div>
     </section>
 
-    <section class="reviews section-reveal" id="reviews">
+    <section class="gallery reveal" id="gallery">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Review Signals</p>
-          <h2>စာဖတ်သူအမြင်များ</h2>
+          <p class="kicker">Photo Collage</p>
+          <h2>Visual Moodboard</h2>
         </div>
-
-        <div class="review-grid">
-          <article class="review-card">
-            <p>
-              "A mixture of realistic and minimal style of writing yet it was emotionally provocative..."
-            </p>
-            <div class="review-meta">Sebastien, Goodreads review on ရေသေအိုင်</div>
-          </article>
-
-          <article class="review-card">
-            <p>
-              "ဆရာ လင်းခါးရဲ့ ဖတ်ဖူးသမျှဝတ္ထု‌တွေထဲ အကြိုက်ဆုံး စာအုပ်ပါ..."
-            </p>
-            <div class="review-meta">Kaung Myat Thi, Pann Satt Lann review on စမ်းရေကြည်နု</div>
-          </article>
-
-          <article class="review-card">
-            <p>
-              "ဖတ်လို့ပြီးခါနီးကျမှ ဟောတော် ဆိုပြီး ကိုယ်ပါအံ့ဩပြီး ငိုလိုက်ရတာ..."
-            </p>
-            <div class="review-meta">Heather Moe, Pann Satt Lann review on ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ</div>
-          </article>
-        </div>
+        <div class="photo-wall" id="photo-wall"></div>
       </div>
     </section>
 
-    <section class="preorder section-reveal" id="preorder">
-      <div class="container preorder-grid">
-        <div>
-          <p class="eyebrow">Current Campaign</p>
-          <h2>လေပုရဝုဏ်</h2>
-          <p class="muted">
-            New release pre-order ကို Messenger နဲ့ Telegram bot မှာ direct order တင်နိုင်ပါပြီ။
-          </p>
+    <section class="reviews reveal" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Reader Voices</p>
+          <h2>ဝေဖန်သုံးသပ်ချက်များ</h2>
+        </div>
+        <div class="review-row" id="review-row"></div>
+      </div>
+    </section>
 
-          <ul class="tier-list">
+    <section class="preorder reveal" id="preorder">
+      <div class="container preorder-shell">
+        <div>
+          <p class="kicker">Now Open</p>
+          <h2>လေပုရဝုဏ်</h2>
+          <p class="small-copy">new pre-order campaign - quick checkout through Messenger and Telegram bot.</p>
+          <ul class="price-list">
             <li><span>1 အုပ်</span><strong>350 THB</strong></li>
             <li><span>15 အုပ်</span><strong>4,462.50 THB</strong></li>
             <li><span>30 အုပ်</span><strong>7,350 THB</strong></li>
@@ -148,38 +132,33 @@
         </div>
 
         <div class="preorder-card">
-          <h3>Order Now</h3>
-          <p>
-            Payment slip submit လုပ်ပြီး admin approval ရလာတာနဲ့ နာမည်၊ ဖုန်း၊ လိပ်စာ၊ location
-            အချက်အလက်များကို chat ထဲမှာဆက်လက်ဖြည့်နိုင်ပါတယ်။
-          </p>
-          <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Open Messenger</a>
-          <a class="btn btn-ghost js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Open Telegram Bot</a>
-          <p class="tiny-note">Tip: production deploy မလုပ်ခင် app.js ထဲက CTA links ကို သင့် official bot URLs နဲ့ ပြောင်းပါ။</p>
+          <p>Start chat, send payment slip, get admin approval, and confirm delivery details.</p>
+          <a class="btn btn-primary js-cta-messenger" href="#" target="_blank" rel="noopener noreferrer">Order via Messenger</a>
+          <a class="btn btn-soft js-cta-telegram" href="#" target="_blank" rel="noopener noreferrer">Order via Telegram</a>
         </div>
       </div>
     </section>
 
-    <section class="sources section-reveal" id="sources">
+    <section class="sources reveal" id="sources">
       <div class="container">
-        <h2>Sources</h2>
-        <ul>
-          <li><a href="https://www.goodreads.com/author/show/19507238._" target="_blank" rel="noopener noreferrer">Goodreads Author Profile: လင်းခါး</a></li>
-          <li><a href="https://www.goodreads.com/author/list/19507238._" target="_blank" rel="noopener noreferrer">Goodreads Books List (3 distinct works)</a></li>
-          <li><a href="https://www.goodreads.com/book/show/52725373" target="_blank" rel="noopener noreferrer">Goodreads: ရေသေအိုင်</a></li>
-          <li><a href="https://www.pannsattlann.com/product/yay-thay-eain/" target="_blank" rel="noopener noreferrer">Pann Satt Lann: ရေသေအိုင်</a></li>
-          <li><a href="https://www.pannsattlann.com/product/sann-yay-kyi-nu/" target="_blank" rel="noopener noreferrer">Pann Satt Lann: စမ်းရေကြည်နု</a></li>
-          <li><a href="https://www.pannsattlann.com/product/athael-kwal-pasin-pyan/" target="_blank" rel="noopener noreferrer">Pann Satt Lann: ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ</a></li>
-          <li><a href="https://eng.mizzima.com/2026/03/02/31738" target="_blank" rel="noopener noreferrer">Mizzima: Myanmar: The Write Side of History</a></li>
-        </ul>
+        <details>
+          <summary>Sources</summary>
+          <ul>
+            <li><a href="https://www.goodreads.com/author/show/19507238._" target="_blank" rel="noopener noreferrer">Goodreads Author Profile</a></li>
+            <li><a href="https://www.goodreads.com/author/list/19507238._" target="_blank" rel="noopener noreferrer">Goodreads Author Books</a></li>
+            <li><a href="https://www.goodreads.com/book/show/52725373" target="_blank" rel="noopener noreferrer">Goodreads: ရေသေအိုင်</a></li>
+            <li><a href="https://www.pannsattlann.com/author-tag/linn-khar/" target="_blank" rel="noopener noreferrer">Pann Satt Lann Author Page</a></li>
+            <li><a href="https://eng.mizzima.com/2026/03/02/31738" target="_blank" rel="noopener noreferrer">Mizzima Feature</a></li>
+          </ul>
+        </details>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
+    <div class="container footer-shell">
       <p>© <span id="year"></span> Lynn Khar Portfolio</p>
-      <p>Built for lynnkhar.com</p>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 

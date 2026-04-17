@@ -3,77 +3,129 @@ const CONTACT_LINKS = {
   telegram: 'https://t.me/your_bot_username',
 };
 
-const books = [
+const postcards = [
   {
     title: 'ရေသေအိုင်',
-    year: '2019 (First published)',
-    pages: '228 pages',
-    tags: ['Novel', 'Realist Drama'],
-    description: 'လူငယ်ဘဝရုန်းကန်မှုနဲ့ အခြေခံလူတန်းစားဘဝထဲက အမှန်တရားများကို ခံစားချက်နက်နက်နဲနဲနဲ့ ရေးဖွဲ့ထားတဲ့ ဝတ္ထု။',
-    links: [
-      { label: 'Goodreads 3.98 (48 ratings)', url: 'https://www.goodreads.com/book/show/52725373' },
-      { label: 'Pann Satt Lann 4.75 (4 reviews)', url: 'https://www.pannsattlann.com/product/yay-thay-eain/' },
-    ],
+    year: '2019',
+    image: 'https://www.pannsattlann.com/wp-content/uploads/2019/08/yay-thay-e.png',
+    summary: 'youth, memory, and social pressure in one emotionally heavy arc.',
+    href: 'https://www.goodreads.com/book/show/52725373',
   },
   {
     title: 'စမ်းရေကြည်နု',
-    year: '2020 (June print)',
-    pages: '239 pages',
-    tags: ['Novel', 'Social Life'],
-    description: 'မိသားစု၊ ဆင်းရဲရုန်းကန်မှုနဲ့ လူမှုဘဝပြောင်းလဲမှုအတွင်း ခံစားချက်အမျိုးမျိုးကို ထိမိစေသည့် ဖတ်ရှုရမယ့်စာအုပ်။',
-    links: [
-      { label: 'Goodreads 4.07 (27 ratings)', url: 'https://www.goodreads.com/author/list/19507238._' },
-      { label: 'Pann Satt Lann 5.00 (3 reviews)', url: 'https://www.pannsattlann.com/product/sann-yay-kyi-nu/' },
-    ],
+    year: '2020',
+    image: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu.png',
+    summary: 'a portrait of everyday struggle, family, and quiet collapse.',
+    href: 'https://www.pannsattlann.com/product/sann-yay-kyi-nu/',
   },
   {
     title: 'ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ',
-    year: '2025 (3rd print listed)',
-    pages: '240 pages',
-    tags: ['Coming-of-age', 'Youth Story'],
-    description: 'ဆယ်ကျော်သက်ကာလအတွင်း မိတ်ဆွေမှု၊ အချစ်နဲ့ နာကျင်မှုတို့ကို ပေါင်းစပ်ထားတဲ့ coming-of-age သဘောတရားပါဝင်သည့် ဝတ္ထု။',
-    links: [
-      { label: 'Goodreads 3.87 (23 ratings)', url: 'https://www.goodreads.com/author/list/19507238._' },
-      { label: 'Pann Satt Lann 4.50 (2 reviews)', url: 'https://www.pannsattlann.com/product/athael-kwal-pasin-pyan/' },
-    ],
+    year: '2025',
+    image: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin.png',
+    summary: 'coming-of-age tenderness with jagged edges.',
+    href: 'https://www.pannsattlann.com/product/athael-kwal-pasin-pyan/',
   },
   {
     title: 'လေပုရဝုဏ်',
     year: 'Upcoming',
-    pages: 'Pre-order campaign',
-    tags: ['New Release', 'Pre-Order'],
-    description: 'လက်ရှိ campaign အဖြစ် pre-order ဖွင့်ထားသော title အသစ်။ Messenger နှင့် Telegram bot မှာ တိုက်ရိုက် order တင်နိုင်ပါသည်။',
-    links: [],
+    image: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin-600x600.png',
+    summary: 'current pre-order campaign with messenger + telegram checkout.',
+    href: '#preorder',
   },
 ];
 
-function renderBooks() {
-  const root = document.getElementById('books-grid');
+const photos = [
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2019/08/yay-thay-e.png',
+    alt: 'ရေသေအိုင် cover photo',
+  },
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu.png',
+    alt: 'စမ်းရေကြည်နု cover photo',
+  },
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2025/02/phan-palin.png',
+    alt: 'ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ cover photo',
+  },
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu-1.jpg',
+    alt: 'စမ်းရေကြည်နု additional photo',
+  },
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2020/07/San-yay-kyi-nu-2.jpg',
+    alt: 'စမ်းရေကြည်နု interior image',
+  },
+  {
+    src: 'https://www.pannsattlann.com/wp-content/uploads/2021/06/Shelf-1-6.png',
+    alt: 'book shelf mood image',
+  },
+];
+
+const reviews = [
+  {
+    quote: 'A mixture of realistic and minimal style of writing yet it was emotionally provocative.',
+    meta: 'Goodreads reader on ရေသေအိုင်',
+  },
+  {
+    quote: 'ဆရာ လင်းခါးရဲ့ ဖတ်ဖူးသမျှဝတ္ထုတွေထဲ အကြိုက်ဆုံး စာအုပ်ပါ။',
+    meta: 'Pann Satt Lann reader on စမ်းရေကြည်နု',
+  },
+  {
+    quote: 'ဖတ်လို့ပြီးခါနီးကျမှ ဟောတော် ဆိုပြီး ကိုယ်ပါအံ့ဩပြီး ငိုလိုက်ရတာ။',
+    meta: 'Pann Satt Lann reader on ဖန်ပုလင်းထဲက အသည်းကွဲပုစဉ်းပျံ',
+  },
+];
+
+function renderPostcards() {
+  const root = document.getElementById('postcard-grid');
   if (!root) return;
 
-  root.innerHTML = books
-    .map((book) => {
-      const linksMarkup = (book.links || [])
-        .map((link) => `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`)
-        .join('');
-
-      const tagsMarkup = (book.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join('');
-
+  root.innerHTML = postcards
+    .map((item, index) => {
+      const angle = index % 2 === 0 ? '-2.8deg' : '2.8deg';
       return `
-        <article class="book-card">
-          <div class="book-head">
-            <h3 class="book-title">${book.title}</h3>
-            <span class="book-year">${book.year}</span>
+        <article class="postcard" style="--angle:${angle}">
+          <img src="${item.image}" alt="${item.title} cover" loading="lazy" />
+          <h3>${item.title}</h3>
+          <p>${item.summary}</p>
+          <div class="pc-meta">
+            <span>${item.year}</span>
+            <a href="${item.href}" target="_blank" rel="noopener noreferrer">view</a>
           </div>
-          <div class="book-meta">
-            <span class="tag">${book.pages}</span>
-            ${tagsMarkup}
-          </div>
-          <p class="book-desc">${book.description}</p>
-          ${linksMarkup ? `<div class="book-links">${linksMarkup}</div>` : ''}
         </article>
       `;
     })
+    .join('');
+}
+
+function renderPhotos() {
+  const root = document.getElementById('photo-wall');
+  if (!root) return;
+
+  root.innerHTML = photos
+    .map(
+      (item) => `
+        <figure class="photo">
+          <img src="${item.src}" alt="${item.alt}" loading="lazy" />
+        </figure>
+      `
+    )
+    .join('');
+}
+
+function renderReviews() {
+  const root = document.getElementById('review-row');
+  if (!root) return;
+
+  root.innerHTML = reviews
+    .map(
+      (item) => `
+        <article class="review">
+          <p>"${item.quote}"</p>
+          <small>${item.meta}</small>
+        </article>
+      `
+    )
     .join('');
 }
 
@@ -87,56 +139,85 @@ function wireCtas() {
   });
 }
 
-function setupNavigation() {
+function setupNav() {
   const navToggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('site-nav');
+  if (!navToggle || !nav) return;
 
-  if (navToggle && nav) {
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('open', !expanded);
-    });
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open', !expanded);
+  });
 
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        navToggle.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('open');
-      });
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navToggle.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('open');
     });
-  }
+  });
 }
 
 function setupReveal() {
-  const revealItems = document.querySelectorAll('.section-reveal');
-  if (!revealItems.length) return;
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
 
-  const observer = new IntersectionObserver(
+  const obs = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.18 }
+    { threshold: 0.15 }
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  items.forEach((item) => obs.observe(item));
+}
+
+function setupHeroMotion() {
+  const stack = document.getElementById('hero-stack');
+  if (!stack || window.matchMedia('(max-width: 1020px)').matches) return;
+
+  let rafId = null;
+  const cards = stack.querySelectorAll('.hero-card');
+
+  stack.addEventListener('mousemove', (event) => {
+    const rect = stack.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      cards.forEach((card, index) => {
+        const depth = (index + 1) * 7;
+        card.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+      });
+    });
+  });
+
+  stack.addEventListener('mouseleave', () => {
+    cards.forEach((card) => {
+      card.style.transform = 'translate(0, 0)';
+    });
+  });
 }
 
 function setYear() {
-  const yearEl = document.getElementById('year');
-  if (!yearEl) return;
-  yearEl.textContent = String(new Date().getFullYear());
+  const year = document.getElementById('year');
+  if (year) year.textContent = String(new Date().getFullYear());
 }
 
 function boot() {
-  renderBooks();
+  renderPostcards();
+  renderPhotos();
+  renderReviews();
   wireCtas();
-  setupNavigation();
+  setupNav();
   setupReveal();
+  setupHeroMotion();
   setYear();
 }
 
